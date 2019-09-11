@@ -13,8 +13,8 @@
         return 0;
     }
     function print(max,brray){
-        for (curent=0;curent<max;curent++){
-            for (column=0;column<max;column++){
+        for (curent=0;curent<=max;curent++){
+            for (column=0;column<=max;column++){
                 document.write(brray[curent][column]+' ');
             }
             document.write('<br>');
@@ -24,9 +24,9 @@
     let array = [];
     let curent, column = 0;
     let sum = 0;
-    for (curent = 0; curent < max; curent++) {
+    for (curent = 0; curent <= max; curent++) {
         array[curent] = new Array(max);
-        for (column = 0; column < max; column++) {
+        for (column = 0; column <= max; column++) {
             array[curent][column] = Math.floor(Math.random() * 100);
             sum += check(curent, column, array);
         }
