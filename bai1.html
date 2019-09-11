@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai1</title>
+</head>
+<body>
+Enter a number:<input id="input" type="text">
+<button type="button" onclick="show()">Show</button>
+<script>
+    function ktSoNguyenTo(numBer) {
+        let check = 2;
+        let i, j;
+        for (i = 2; i < numBer; i++) {
+            for (j = (Math.floor(i / 2)); j > 1; j--) {
+                if (i % j === 0) {
+                    check = 0;
+                    break;
+                }
+            }
+            if (check === 2) {
+                document.write( i+' ')
+            }
+            check = 2;
+        }
+    }
+    function show() {
+        let numBer = document.getElementById('input').value;
+        console.log(numBer);
+        ktSoNguyenTo(numBer);
+    }
+</script>
+</body>
+</html>

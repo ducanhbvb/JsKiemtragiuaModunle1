@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai4</title>
+</head>
+<body>
+<script>
+    function check(a, b, array) {
+        if (a === b) {
+            return array[a][b];
+        }
+        return 0;
+    }
+    function print(max,brray){
+        for (curent=0;curent<max;curent++){
+            for (column=0;column<max;column++){
+                document.write(brray[curent][column]+' ');
+            }
+            document.write('<br>');
+        }
+    }
+    let max = parseInt(prompt('input max Curent'));
+    let array = [];
+    let curent, column = 0;
+    let sum = 0;
+    for (curent = 0; curent < max; curent++) {
+        array[curent] = new Array(max);
+        for (column = 0; column < max; column++) {
+            array[curent][column] = Math.floor(Math.random() * 100);
+            sum += check(curent, column, array);
+        }
+    }
+    print(max,array);
+    document.write('total diagonal='+sum);
+</script>
+</body>
+</html>
